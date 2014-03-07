@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/
+xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Ejercicio de Prueba</title>
+<style type="text/css">
+<!--
+.Estilo1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color:#330099;
+	font-weight:bold;
+}
+.Estilo2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color:#000000;
+	font-weight:bold;
+}
+.Estilo3 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color:#000000;
+}
+</style>
+</head>
+<body>
+<div align="center"><span class="Estilo1"> Ejercicio de Prueba. </span></div><hr />
+<div align="rigth"><span class="Estilo2"> Consigna: Se debe listar los números del 1 al 100. Pero para los múltiplos de tres se debe mostrar la palabra "Fizz" en lugar del número y de los múltiplos de cinco se debe mostrar la palabra "Buzz". Para los números que son múltiplos de tres y cinco se debe mostrar la palabra "FizzBuzz". </span></div><p>
+<span class="Estilo3">
+<script type="text/javascript">
+//Declaraciones
+var cantidad = new Array(100);
+var restoCinco, restoTres;
+var fizz = "Fizz";
+var buzz = "Buzz";
+var fizzBuzz = "FizzBuzz"
+//Cálculo de los múltiplos de los números del 1 al 100
+for (i=1;i<101;i++){
+restoTres=i%3
+restoCinco=i%5
+if (restoTres == 0 && restoCinco == 0)
+{cantidad[i]=fizzBuzz
+}else{if (restoTres == 0)
+{cantidad[i] = fizz
+}else{if (restoCinco == 0)
+{cantidad[i]=buzz
+}else{cantidad[i] = i}}}
+}
+//Impresión de los 100 valores según condiciones anteriores
+for (i=1;i<101;i++){
+document.write(cantidad[i])
+document.write(", ")
+}
+</script></span>
+</body>
+</html>
